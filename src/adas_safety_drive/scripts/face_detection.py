@@ -49,7 +49,7 @@ def blinkedleft(a, b, c, d, e, f):
     if (ratio > 0.18):
         return 2
     #elif (ratio > 0.21 and ratio <= 0.25):
-     #   return 1
+    #   return 1
     else:
         return 0
 def blinkedright(a, b, c, d, e, f):
@@ -61,7 +61,7 @@ def blinkedright(a, b, c, d, e, f):
     if (ratio > 0.18):
         return 2
     #elif (ratio > 0.21 and ratio <= 0.25):
-     #   return 1
+    #   return 1
     else:
         return 0
 # loop until 1 minute
@@ -87,9 +87,9 @@ while time.time() - start_time <= 60:
 
             # The numbers are actually the landmarks which will show eye
             left_blink = blinkedleft(landmarks[36], landmarks[37],
-                                landmarks[38], landmarks[41], landmarks[40], landmarks[39])
+                                     landmarks[38], landmarks[41], landmarks[40], landmarks[39])
             right_blink = blinkedright(landmarks[42], landmarks[43],
-                                landmarks[44], landmarks[47], landmarks[46], landmarks[45])
+                                       landmarks[44], landmarks[47], landmarks[46], landmarks[45])
 
             # Now judge what to do for the eye blinks
             if (left_blink == 0 and right_blink == 0):
@@ -104,12 +104,12 @@ while time.time() - start_time <= 60:
             # print status every 2 seconds
             if time.time() - prev_time >= 2:
                 prev_time = time.time()
-                sleep_count = sleep 
-                drowsy_count = drowsy 
-                active_count = active 
+                sleep_count = sleep
+                drowsy_count = drowsy
+                active_count = active
                 total_count = sleep_count + drowsy_count + active_count
                 Rate = sleep_count/total_count
-                
+
                 print("Sleep:", sleep_count )
                 print("Drowsy:", drowsy_count)
                 print("Active:", active)
@@ -119,7 +119,7 @@ while time.time() - start_time <= 60:
                     Alarm = True
                 else :
                     Alarm = False
-              
-        
+
+
 cap.release()
 cv2.destroyAllWindows()

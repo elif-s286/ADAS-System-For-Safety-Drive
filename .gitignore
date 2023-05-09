@@ -1,0 +1,16 @@
+
+build/
+
+devel/
+
+.idea/
+
+.catkin_workspace
+
+src/CMakeLists.txt
+
+
+
+src/adas_safety_drive/scripts/subscriber.py
+
+*.pyc
